@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:untitled1/core/app_assets.dart';
 import 'package:untitled1/main.dart';
-import 'package:untitled1/screens/sign_in_screen.dart';
-import 'package:untitled1/screens/sign_up_screen.dart';
-import 'package:untitled1/screens/themes_screen.dart';
+import 'package:untitled1/screens/discover_screen.dart';
 import '../auth/auth_screen.dart';
 
 

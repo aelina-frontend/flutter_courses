@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:untitled1/core/app_textstyle.dart';
+import 'package:untitled1/screens/discover_screen.dart';
 
 class  AuthScreen extends StatefulWidget {
   const AuthScreen ({
@@ -46,7 +47,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       enabledBorder: OutlineInputBorder(
                           borderSide: const BorderSide(
                             color: Colors.black,)),
-                      hintText: 'Email',
+                      hintText: 'jane@example.com',
                       hintStyle: TextStyle(fontSize: 15, color: Colors.black.withOpacity(0.5)),
                       focusedBorder: const OutlineInputBorder(
                         borderSide:  BorderSide(),
@@ -83,6 +84,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 Expanded(
                   child: ElevatedButton(
                       onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => DiscoverScreen()));
                         _formKey.currentState!.validate();
                         log('tap');
                       },
