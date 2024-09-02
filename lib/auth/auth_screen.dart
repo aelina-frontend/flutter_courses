@@ -1,5 +1,5 @@
 import 'dart:developer';
-
+import 'package:untitled1/core/common/common_button.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled1/core/app_textstyle.dart';
 import 'package:untitled1/screens/discover_screen.dart';
@@ -86,23 +86,30 @@ class _AuthScreenState extends State<AuthScreen> {
             Row(
               children: [
                 Expanded(
-                  child: ElevatedButton(
-                      onPressed: () {
+                  child: CommonButton(
+                      title: 'NEXT',
+                      onTap: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => DiscoverScreen()));
-                        _formKey.currentState!.validate();
-                        log('tap');
-                      },
-                      child: const Text('NEXT'),
-                    style: ButtonStyle(
-                      foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
-                      backgroundColor: WidgetStateProperty.all<Color>(Colors.black),
-                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                      )),
-                    ),
-                  
-                  ),
+                      }),
                 ),
+                // Expanded(
+                //   child: ElevatedButton(
+                //       onPressed: () {
+                //         Navigator.push(context, MaterialPageRoute(builder: (context) => DiscoverScreen()));
+                //         _formKey.currentState!.validate();
+                //         log('tap');
+                //       },
+                //       child: const Text('NEXT'),
+                //     style: ButtonStyle(
+                //       foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
+                //       backgroundColor: WidgetStateProperty.all<Color>(Colors.black),
+                //       shape: WidgetStateProperty.all<RoundedRectangleBorder>(const RoundedRectangleBorder(
+                //         borderRadius: BorderRadius.all(Radius.circular(5)),
+                //       )),
+                //     ),
+                //
+                //   ),
+                // ),
               ],
             ),
           ],

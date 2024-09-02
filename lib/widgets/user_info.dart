@@ -15,9 +15,9 @@ class UserInfo extends StatelessWidget {
             Row(
               children: [
                 SizedBox(width: 25),
-                Image.asset(
-                    AppAssets.profilePicture,
-                    height: 250),
+                // Image.asset(
+                //     AppAssets.profilePicture,
+                //     height: 250),
                 SizedBox(width: 10),
                 Column(
                     children:  [

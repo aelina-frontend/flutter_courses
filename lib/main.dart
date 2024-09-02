@@ -8,6 +8,10 @@ final darkTheme = ThemeData.light(useMaterial3: true);
 
 ValueNotifier<bool> isDarkMode = ValueNotifier<bool>(false);
 
+const userName = 'Aelina@';
+const password = 'flutter';
+
+
 void main() {
   runApp(const PortfolioApp());
 }
