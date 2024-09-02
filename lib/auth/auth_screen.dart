@@ -7,10 +7,12 @@ import 'package:untitled1/screens/discover_screen.dart';
 class  AuthScreen extends StatefulWidget {
   const AuthScreen ({
     required this.isRegistrationForm,
+    this.isObscureText = false,
     super.key,
   });
 
   final bool isRegistrationForm;
+  final bool isObscureText;
 
   @override
   State<AuthScreen> createState() => _AuthScreenState();
@@ -34,6 +36,7 @@ class _AuthScreenState extends State<AuthScreen> {
             Form(
                 key: _formKey,
                 child: TextFormField(
+                  obscureText: false,
                   validator: (value) {
                     if ((value?.length ?? 0) < 3){
                       return 'Слишком короткая почта';
@@ -59,6 +62,7 @@ class _AuthScreenState extends State<AuthScreen> {
             Form(
                 key: _formKey2,
                 child: TextFormField(
+                  obscureText: true,
                   validator: (value) {
                     if ((value?.length ?? 0) < 5){
                       return 'Слишком короткий пароль';

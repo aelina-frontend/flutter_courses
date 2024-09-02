@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:untitled1/screens/welcome_screen.dart';
 import '../core/app_assets.dart';
 
 
@@ -123,8 +124,67 @@ class  DiscoverScreen extends StatelessWidget {
                     )
                    ],
                 ),
+              ),
+              SizedBox(height: 20,),
+              Container(
+                child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => WelcomeScreen()));
+                    },
+                    child: Container(
+                        alignment: Alignment.center,
+                        height: 50,
+                        width: 300,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 2.0,
+                          ),
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.white,
+                        ),
+                        child: const Center(child: Text(
+                          'SEE MORE',
+                          style: TextStyle(
+                              fontSize: 13, color: Colors.black,
+                          fontFamily: 'Roboto'),
+                          textAlign: TextAlign.center,
+                        )
+                        )
+                    ),
+                  ),
+              ),
+              Container(
+                height: 80,
 
-              )
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: const <Widget>[
+                    Icon(
+                      Icons.house_outlined,
+                      size: 22.0,
+                      semanticLabel: 'Текст для показа в режиме доступности',
+                    ),
+                    Icon(
+                      Icons.search,
+                      size: 22.0,
+                    ),
+                    ElevatedButton(
+                      onPressed: null,
+                      child: const Text('+'),
+                    ),
+                    Icon(
+                      Icons.mode_comment_outlined,
+                      size: 22.0,
+                    ),
+                    Icon(
+                      Icons.perm_identity,
+                      size: 22.0,
+                    ),
+                  ],
+                ),
+              ),
+
             ]
         ),
       ),
