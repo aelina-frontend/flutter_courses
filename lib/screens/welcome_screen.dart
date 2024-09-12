@@ -1,71 +1,68 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:untitled1/core/app_assets.dart';
-import 'package:untitled1/core/common/common_button.dart';
-import 'package:untitled1/core/theme/app_dimens.dart';
 import 'package:untitled1/main.dart';
-import 'package:untitled1/screens/discover_screen.dart';
-import '../auth/auth_screen.dart';
+import '../core/app_assets.dart';
 
 
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({
-    super.key});
-
+  const WelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-        Stack(
-          children:[ Image.asset(
-                    fit: BoxFit.cover,
-                     AppAssets.rectangle,
-                   ),
-                    Positioned(
-                      right: 0,
-                      left: 0,
-                      top: 0,
-                      bottom: 0,
-                      child: Image.asset(
-                         AppAssets.group,
-                         height: 100,
-                         width: 250,
-                       ),
-                    ),
-          ]
-        ),
-            Padding(
-              padding: EdgeInsets.only(top: AppDimens.largePadding,
-              left: AppDimens.mediumPadding,
-              right: AppDimens.mediumPadding),
-              child: Row(
-                // mainAxisAlignment: MainAxisAlignment.center,
+    return  Scaffold(
+      body: Stack(
+          fit: StackFit.expand,
+          children:
+          [
+            Image.asset(AppAssets.mainPic),
+            Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Expanded(
-                    child: CommonButton(
-                        title: 'LOG IN',
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const AuthScreen( isRegistrationForm: false,)));
-                        }),
+                    flex: 8,
+                    child:
+                    Image.asset(
+                        'assets/tira.png',
+                        width: 100, height: 150),
                   ),
-                  const SizedBox(width: AppDimens.smallPadding,),
                   Expanded(
-                    child: CommonButton(
-                      isWhite: false,
-                        title: 'REGISTER',
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const AuthScreen( isRegistrationForm: true,)));
-                        }),
+                    flex: 2,
+                    child: const Text(
+                      'Rent your dream car from the \n Best Company',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white70,
+                        fontSize: 28,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Hind',
+                      ),
+                    ),
                   ),
-                ],),
-            )
-      ],
-    )
-      ));
+                  Expanded(
+                      flex: 2,
+                      child: Center(
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ButtonStyle(
+                            backgroundColor: WidgetStateProperty.all(Colors.redAccent),
+                            foregroundColor: WidgetStateProperty.all(Colors.white),
+                            minimumSize: WidgetStateProperty.all(Size(220, 50)),
+                            maximumSize: WidgetStateProperty.all(Size(220, 50)),
+                            shape: WidgetStateProperty.all(RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            )),
+                          ),
+                          child: Text('Get Started >',
+                            style: TextStyle(fontSize: 20, fontFamily: 'Inconsolata', fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                      )
+
+                  )]
+            ),
+          ]),
+    );
   }
 }
-
