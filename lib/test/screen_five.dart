@@ -12,11 +12,18 @@ class ScreenFive extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        context.read<GreetingProvider>().greeting,
-        style: TextStyle(fontSize: 40, color: Colors.green),
-      )
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+        context.watch<GreetingProvider>().greeting,
+        style: const TextStyle(fontSize: 40, color: Colors.green),
+      ),
+        Text(
+          context.watch<GreetingProvider>().count.toString(),
+          style: const TextStyle(fontSize: 40, color: Colors.red),
+        ),
+      ]
     );
   }
 }
