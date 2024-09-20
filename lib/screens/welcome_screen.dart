@@ -44,7 +44,9 @@ class WelcomeScreen extends StatelessWidget {
                       flex: 2,
                       child: Center(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).pushNamed('/productList');
+                          },
                           style: ButtonStyle(
                             backgroundColor: WidgetStateProperty.all(Colors.redAccent),
                             foregroundColor: WidgetStateProperty.all(Colors.white),
