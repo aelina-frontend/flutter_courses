@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:untitled1/screens/data.dart';
-
+import '../core/app_assets.dart';
+import 'cart_provider.dart';
 import 'cart_screen.dart';
 
 class ProductListScreen extends StatelessWidget {
@@ -25,11 +27,21 @@ class ProductListScreen extends StatelessWidget {
       body: ListView.builder(
           itemCount: DUMMY_PRODUCTS.length,
         itemBuilder: (ctx, i) => ListTile(
+          leading:Image.asset(AppAssets.getAssetPath(DUMMY_PRODUCTS[i]['title'] as String)),
+
           title: Text(DUMMY_PRODUCTS[i]['title'] as String),
           subtitle: Text('\$${DUMMY_PRODUCTS[i]['price']}'),
           trailing: IconButton(
             icon: Icon(Icons.add),
-            onPressed: (){},
+            onPressed: (){
+              Provider.of<Cart>(context, listen: false).addItem(
+                  DUMMY_PRODUCTS[i]['id'] as String,
+                  DUMMY_PRODUCTS[i]['price'] as double,
+                  DUMMY_PRODUCTS[i]['title'] as String,
+              );
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text('Added item to cart'),));
+            },
           ),
         ),
 

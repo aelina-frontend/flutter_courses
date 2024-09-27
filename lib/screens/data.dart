@@ -1,7 +1,8 @@
 
-const DUMMY_PRODUCTS = [
-  {'id' : '1', 'title' : 'Pissa', 'price' : 9.99},
-  {'id' : '2', 'title' : 'Coca', 'price' : 4.99},
-  {'id' : '3', 'title' : 'Burger', 'price' : 4.99},
-
+  const DUMMY_PRODUCTS = [
+  {'id' : '1', 'title' : 'RANGE ROVER', 'price' : 300.99},
+  {'id' : '2', 'title' : 'TOYOTA', 'price' : 400.99},
+  {'id' : '3', 'title' : 'AUDI Red A6', 'price' : 280.99},
+  {'id' : '4', 'title' : 'LAMBORGHINI', 'price' : 500.99},
+  {'id' : '5', 'title' : 'TESLA', 'price' : 370.99},
 ];
