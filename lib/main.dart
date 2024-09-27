@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:untitled1/auth/auth_screen.dart';
 import 'package:untitled1/screens/car_information.dart';
 import 'package:untitled1/screens/cart_provider.dart';
 import 'package:untitled1/screens/cart_screen.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
           '/cartScreen' : (context) =>  CartScreen(),
           '/firstScreen' : (context) =>  FirstScreen(),
           '/carInformation' : (context) =>  CarInformation(),
+          '/authScreen' : (context) =>  AuthScreen(true, false ),
 
         },
       ),

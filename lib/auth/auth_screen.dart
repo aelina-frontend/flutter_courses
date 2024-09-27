@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
-class AuthScreen extends StatelessWidget {
-  const AuthScreen({super.key});
+import '../core/app_textslyle.dart';
+import '../core/common/common_button.dart';
+
+class AuthScreen extends StatefulWidget {
+  const AuthScreen(this.isRegistrationForm, this.isObscureText, {super.key});
 
   final bool isRegistrationForm;
   final bool isObscureText;
@@ -11,6 +14,7 @@ class AuthScreen extends StatelessWidget {
 }
 
 class _AuthScreenState extends State<AuthScreen> {
+
   final _formKey = GlobalKey<FormState>();
   final _formKey2 = GlobalKey<FormState>();
 
@@ -79,29 +83,11 @@ class _AuthScreenState extends State<AuthScreen> {
               children: [
                 Expanded(
                   child: CommonButton(
-                      title: 'NEXT',
+                      title: 'lOG IN',
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => DiscoverScreen()));
+                        Navigator.of(context).pushNamed('/firstScreen');
                       }),
                 ),
-                // Expanded(
-                //   child: ElevatedButton(
-                //       onPressed: () {
-                //         Navigator.push(context, MaterialPageRoute(builder: (context) => DiscoverScreen()));
-                //         _formKey.currentState!.validate();
-                //         log('tap');
-                //       },
-                //       child: const Text('NEXT'),
-                //     style: ButtonStyle(
-                //       foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
-                //       backgroundColor: WidgetStateProperty.all<Color>(Colors.black),
-                //       shape: WidgetStateProperty.all<RoundedRectangleBorder>(const RoundedRectangleBorder(
-                //         borderRadius: BorderRadius.all(Radius.circular(5)),
-                //       )),
-                //     ),
-                //
-                //   ),
-                // ),
               ],
             ),
           ],
