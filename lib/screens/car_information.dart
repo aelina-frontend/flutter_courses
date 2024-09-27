@@ -125,17 +125,29 @@ class CarInformation extends StatelessWidget {
                   ]
                 ),
               ),
-          SizedBox(height: 50,),
+          SizedBox(height: 40,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(AppAssets.ellipse3,),
+              SizedBox(width: 10,),
+              Image.asset(AppAssets.ellipse2,),
+              SizedBox(width: 10,),
+              Image.asset(AppAssets.ellipse3,),
+            ],
+          ),
+          SizedBox(height: 40,),
           Text(
             textAlign: TextAlign.right,
             'RENDER', style: TextStyle(fontSize: 16, fontFamily: 'Roboto Condensed', fontWeight: FontWeight.w400, color: Colors.teal),
           ),
+          SizedBox(height: 20,),
           Row(
             children: [
               SizedBox(width: 10,),
               Image.asset(AppAssets.ellipse,),
-              SizedBox(width: 10,),
-              Text('Lorem Ipsum', style: TextStyle(fontSize: 14, fontFamily: 'PT Sans', fontWeight: FontWeight.w400),),
+              SizedBox(width: 20,),
+              Text('Lorem Ipsum', style: TextStyle(fontSize: 16, fontFamily: 'PT Sans', fontWeight: FontWeight.w400),),
               Spacer(),
               IconButton(
                 icon: Icon(Icons.comment_outlined, color: Colors.deepPurple,),

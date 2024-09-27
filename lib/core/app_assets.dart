@@ -11,6 +11,8 @@ class AppAssets {
   static const String pure2 = 'assets/pure2.png';
   static const String tiire = 'assets/tiire.png';
   static const String ellipse = 'assets/ellipse.png';
+  static const String ellipse2 = 'assets/ellipse2.png';
+  static const String ellipse3 = 'assets/ellipse3.png';
 
   static String getAssetPath(String name)
   {
