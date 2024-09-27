@@ -8,6 +8,9 @@ class AppAssets {
   static const String lamborghini = 'assets/lamborghini.png';
   static const String tesla = 'assets/tesla.png';
   static const String frame = 'assets/frame.png';
+  static const String pure2 = 'assets/pure2.png';
+  static const String tiire = 'assets/tiire.png';
+  static const String ellipse = 'assets/ellipse.png';
 
   static String getAssetPath(String name)
   {
