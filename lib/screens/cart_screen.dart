@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../core/app_assets.dart';
+import '../core/common/common_button.dart';
 import 'cart_provider.dart';
 import 'data.dart';
 
@@ -51,7 +52,20 @@ class CartScreen extends StatelessWidget {
                   quantity: cart.items.values.toList()[i].quantity,
                   price: cart.items.values.toList()[i].price,
                 ),
-              ))
+              ),
+
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CommonButton(
+                title: 'Confirm',
+                isWhite: false,
+                onTap: () {
+                  Navigator.of(context).pushNamed('/paymentMethodsScreen');
+                }
+            ),
+          ),
+
         ],
       ),
     );

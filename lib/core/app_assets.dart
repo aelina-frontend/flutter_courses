@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 
 class AppAssets {
 
@@ -13,6 +14,12 @@ class AppAssets {
   static const String ellipse = 'assets/ellipse.png';
   static const String ellipse2 = 'assets/ellipse2.png';
   static const String ellipse3 = 'assets/ellipse3.png';
+  static const String payment1 = 'assets/payment1.png';
+  static const String payment2 = 'assets/payment2.png';
+  static const String payment3 = 'assets/payment3.png';
+  static const String creditCard = 'assets/creditCard.png';
+  static const String check = 'assets/check.png';
+
 
   static String getAssetPath(String name)
   {
