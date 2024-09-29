@@ -34,9 +34,22 @@ class FirstScreen extends StatelessWidget {
                 SizedBox(height: 30,),
                 Row(
                   children: [
-                    SizedBox(width: 25,),
+                    SizedBox(width: 20,),
                     ElevatedButton(onPressed: (){},
-                        child: Text('family cars'),
+                        child: Text('Family cars', style: TextStyle(fontSize:12, fontFamily: 'PT Sans', fontWeight: FontWeight.w400, color: Colors.white),),
+                        style: ButtonStyle(
+                          backgroundColor: WidgetStateProperty.all(Colors.cyan[900]),
+                          // minimumSize: WidgetStateProperty.all(Size(220, 50)),
+                          // maximumSize: WidgetStateProperty.all(Size(220, 50)),
+                          shape: WidgetStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          )
+                          ),
+                        )
+                    ),
+                    SizedBox(width: 7,),
+                    ElevatedButton(onPressed: (){},
+                        child: Text('Cheap cars', style: TextStyle(fontSize:12, fontFamily: 'PT Sans', fontWeight: FontWeight.w400, color: Colors.black),),
                         style: ButtonStyle(
                           // foregroundColor: WidgetStateProperty.all(Colors.white),
                           // minimumSize: WidgetStateProperty.all(Size(220, 50)),
@@ -47,9 +60,9 @@ class FirstScreen extends StatelessWidget {
                           ),
                         )
                     ),
-                    SizedBox(width: 15,),
+                    SizedBox(width: 7,),
                     ElevatedButton(onPressed: (){},
-                        child: Text('Cheap cars'),
+                        child: Text('Luxuly cars', style: TextStyle(fontSize:12, fontFamily: 'PT Sans', fontWeight: FontWeight.w400, color: Colors.black),),
                         style: ButtonStyle(
                           // foregroundColor: WidgetStateProperty.all(Colors.white),
                           // minimumSize: WidgetStateProperty.all(Size(220, 50)),
@@ -60,19 +73,11 @@ class FirstScreen extends StatelessWidget {
                           ),
                         )
                     ),
-                    SizedBox(width: 15,),
-                    ElevatedButton(onPressed: (){},
-                        child: Text('Luxuly cars'),
-                        style: ButtonStyle(
-                          // foregroundColor: WidgetStateProperty.all(Colors.white),
-                          // minimumSize: WidgetStateProperty.all(Size(220, 50)),
-                          // maximumSize: WidgetStateProperty.all(Size(220, 50)),
-                          shape: WidgetStateProperty.all(RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          )
-                          ),
-                        )
-                    ),
+                    SizedBox(width: 7,),
+                    IconButton(onPressed: (){
+                      Navigator.of(context).pushNamed('/searchScreen');
+                    },
+                        icon: Icon(Icons.search, size: 28, color: Colors.brown,),)
                   ],
                 ),
                 SizedBox(height: 30,),

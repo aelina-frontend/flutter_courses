@@ -18,13 +18,14 @@ class CommonButton extends StatelessWidget {
       height: 60,
       width: double.infinity,
       child: ElevatedButton(
+
         style: ElevatedButton.styleFrom(
           elevation: 0,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5),
               side: const BorderSide(color: Colors.black,
                   width: 2)),
-          backgroundColor: isWhite ? Colors.white : Colors.black,
+          backgroundColor: isWhite ? Colors.white : Colors.cyan[900],
         ),
         onPressed: onTap,
         child: Text(
