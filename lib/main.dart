@@ -7,6 +7,7 @@ import 'package:untitled1/screens/cart_screen.dart';
 import 'package:untitled1/screens/credit_card.dart';
 import 'package:untitled1/screens/first_screen.dart';
 import 'package:untitled1/screens/info_page.dart';
+import 'package:untitled1/screens/my_profil.dart';
 import 'package:untitled1/screens/payment_methods_screen.dart';
 import 'package:untitled1/screens/paymend_made.dart';
 import 'package:untitled1/screens/search_screen.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
           '/creditCard': (context) => CreditCard(),
           '/paymendMade': (context) => PaymendMade(),
           '/infoPage': (context) => InfoPage(),
+          '/myProfil': (context) => MyProfil(),
 
         },
       ),

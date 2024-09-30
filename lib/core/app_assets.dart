@@ -19,6 +19,8 @@ class AppAssets {
   static const String payment3 = 'assets/payment3.png';
   static const String creditCard = 'assets/creditCard.png';
   static const String check = 'assets/check.png';
+  static const String frame10 = 'assets/frame10.png';
+  static const String frame12 = 'assets/frame12.png';
 
 
   static String getAssetPath(String name)

@@ -13,15 +13,11 @@ var myAppBar =  AppBar(
         return PopupMenuButton(
           onSelected: (result) {
             switch(result){
-              case 0: Navigator.of(context).pushNamed('/firstScreen');
+              case 0: Navigator.of(context).pushNamed('/myProfil');
               break;
               case 1: Navigator.of(context).pushNamed('/firstScreen');
               break;
-              case 2: Navigator.of(context).pushNamed('/paymentMethodsScreen');
-              break;
-              case 3: Navigator.of(context).pushNamed('/paymendMade');
-              break;
-              case 4: Navigator.of(context).pushNamed('/infoPage');
+              case 2: Navigator.of(context).pushNamed('/infoPage');
               break;
             }
           }, itemBuilder: (BuildContext context) {
@@ -36,14 +32,6 @@ var myAppBar =  AppBar(
             ),
             PopupMenuItem(
               value: 2,
-              child: Text('Settings'),
-            ),
-            PopupMenuItem(
-              value: 3,
-              child: Text('Notifications'),
-            ),
-            PopupMenuItem(
-              value: 4,
               child: Text('Info page'),
             ),
           ];

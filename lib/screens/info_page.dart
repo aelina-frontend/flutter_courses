@@ -29,6 +29,31 @@ class InfoPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text('Or a a typeface without rely meaningful\n content. Lorem ipsum may be used as a\n placeholder before final copy is available',
                 style: TextStyle(fontSize: 19, fontWeight: FontWeight.w400, fontFamily: 'Red Hat Text', color: Colors.brown),),
+            ),
+        SizedBox(height: 70,),
+            Padding(
+                padding: EdgeInsets.all(8.0),
+              child: Text('Reach Us', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, fontFamily: 'Roboto', color: Colors.black),)
+            ),
+            SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: Icon(Icons.phone, size: 30,color: Colors.indigo,),
+                  onPressed: (){},
+                ),
+                SizedBox(width: 30,),
+                IconButton(
+                  icon: Icon(Icons.mail_outline, size: 30,color: Colors.red,),
+                  onPressed: (){},
+                ),
+                SizedBox(width: 30,),
+                IconButton(
+                  icon: Icon(Icons.location_on_outlined, size: 30,color: Colors.green,),
+                  onPressed: (){},
+                ),
+              ],
             )
           ],
         ),
