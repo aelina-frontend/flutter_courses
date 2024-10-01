@@ -39,18 +39,6 @@ var myAppBar =  AppBar(
         );
       }
     ),
-    // PopupMenuItem(
-    //   onTap: (){
-    //     Navigator.of(ctx).pushNamed('/firstScreen');
-    //   },
-    //   child:  Text('мая строница'),
-    // ),
-    // PopupMenuItem(
-    //   onTap: (){
-    //     Navigator.of(ctx).pushNamed('/creditCard');
-    //   },
-    //   child:  Text('мая строница'),
-    // ),
   ],
 );
 
