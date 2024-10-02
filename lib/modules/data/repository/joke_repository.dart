@@ -1,6 +1,3 @@
-
-
-
 import '../model/joke.dart';
 
 abstract class JokeRepository{

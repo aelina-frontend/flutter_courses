@@ -13,13 +13,19 @@ class JokeRepositoryImpl implements JokeRepository{
   });
 
   @override
-  Future<Joke> fetchJoke() async{
-    final result = await dio.get('https://icanhazdadjoke.com/', options: Options(
-      headers: {'Accept': 'application/json'},
-    ));
+  Future<JokeEntity> fetchJoke() async{
+    String joke = '';
+  }
+    do {
+  final result = await dio.get('https://icanhazdadjoke.com/',
+  options: Options(
+  headers: {'Accept': 'application/json'},
+  ));
+  final model = JokeModel.fromJson(result.data);
+  } while(jokeModel.joke?.contains('?') ?? false);
     // Map<String, dynamic> data = jsonDecode(result.data);
     // print(data.runtimeType.toString());
-    return Joke.fromJson(result.data);
+    return mapper.mapModel(model: jokeModel);
   }
 
 }
