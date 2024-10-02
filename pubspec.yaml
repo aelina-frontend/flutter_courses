@@ -39,6 +39,12 @@ dependencies:
   font_awesome_flutter: ^10.7.0
   dio: ^5.7.0
 
+  flutter_polyline_points: ^2.1.0
+  google_maps_flutter: ^2.9.0
+  google_places_flutter: ^2.0.9
+  google_api_headers: ^4.2.3
+  google_maps_flutter_web: ^0.5.10
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

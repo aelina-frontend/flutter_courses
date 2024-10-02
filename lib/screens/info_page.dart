@@ -30,11 +30,24 @@ class InfoPage extends StatelessWidget {
               child: Text('Or a a typeface without rely meaningful\n content. Lorem ipsum may be used as a\n placeholder before final copy is available',
                 style: TextStyle(fontSize: 19, fontWeight: FontWeight.w400, fontFamily: 'Red Hat Text', color: Colors.brown),),
             ),
-        SizedBox(height: 70,),
-            Padding(
-                padding: EdgeInsets.all(8.0),
-              child: Text('Reach Us', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, fontFamily: 'Roboto', color: Colors.black),)
+        SizedBox(height: 20,),
+        Row(
+          children: [
+            Spacer(),
+            TextButton(onPressed: (){},
+                child: Text('More', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400, fontFamily: 'Roboto', color: Colors.red),),
             ),
+            SizedBox(width: 20,),
+          ],
+        ),
+        SizedBox(height: 70,),
+        Row(
+          children: [
+            SizedBox(width: 20,),
+            Text('Reach Us', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, fontFamily: 'Roboto', color: Colors.black),),
+            Spacer(),
+          ],
+        ),
             SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
