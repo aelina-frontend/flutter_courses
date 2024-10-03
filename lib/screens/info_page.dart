@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:yandex_mapkit/yandex_mapkit.dart';
 import '../core/my_appbar.dart';
 
 class InfoPage extends StatelessWidget {
@@ -67,6 +67,13 @@ class InfoPage extends StatelessWidget {
                   onPressed: (){},
                 ),
               ],
+            ),
+            SizedBox(height: 20,),
+            Container(
+                child:YandexMap(
+                  mode2DEnabled: true,
+                  tiltGesturesEnabled: false,
+                )
             )
           ],
         ),
