@@ -1,12 +1,11 @@
 import 'dart:math';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled1/modules/data/repository/joke_repository_impl.dart';
 import 'package:untitled1/modules/presentation/bloc/joke_state.dart';
-
-import '../data/model/joke.dart';
+import '../data/model/joke_model.dart';
 import 'bloc/joke_bloc.dart';
 import 'bloc/joke_event.dart';
 
