@@ -41,6 +41,7 @@ dependencies:
 
   flutter_polyline_points: ^2.1.0
   yandex_mapkit: ^4.1.0
+  device_preview: ^1.2.0
 
 dev_dependencies:
   flutter_test:

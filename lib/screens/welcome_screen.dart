@@ -45,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
                       child: Center(
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.of(context).pushNamed('/authScreen');
+                            Navigator.of(context).pushNamed('/test');
                           },
                           style: ButtonStyle(
                             backgroundColor: WidgetStateProperty.all(Colors.redAccent),
