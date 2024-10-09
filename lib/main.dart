@@ -1,21 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:untitled1/auth/auth_screen.dart';
-import 'package:untitled1/screens/car_information.dart';
-import 'package:untitled1/screens/cart_provider.dart';
-import 'package:untitled1/screens/cart_screen.dart';
-import 'package:untitled1/screens/credit_card.dart';
-import 'package:untitled1/screens/first_screen.dart';
-import 'package:untitled1/screens/info_page.dart';
-import 'package:untitled1/screens/my_profil.dart';
-import 'package:untitled1/screens/payment_methods_screen.dart';
-import 'package:untitled1/screens/paymend_made.dart';
-import 'package:untitled1/screens/search_screen.dart';
-import 'package:untitled1/screens/test.dart';
-import 'package:untitled1/screens/welcome_screen.dart';
-import 'package:untitled1/screens/product_list_screen.dart';
-import 'core/app_assets.dart';
+import 'package:untitled1/welcome_screen.dart';
 import 'lessons/lesson1/lesson1.dart';
 
 
@@ -37,7 +22,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: Test(),
+      home: WelcomeScreen(),
     );
   }
 }
