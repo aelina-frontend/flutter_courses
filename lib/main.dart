@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled1/welcome_screen.dart';
+import 'package:untitled1/lessons/lesson2/lesson_func_screen.dart';
+import 'package:untitled1/screens/welcome_screen.dart';
 import 'lessons/lesson1/lesson1.dart';
 
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      useInheritedMediaQuery: true,
+      debugShowCheckedModeBanner: false,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
