@@ -14,7 +14,6 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         title: Text(
           'Menu',
@@ -41,12 +40,24 @@ class _FirstScreenState extends State<FirstScreen> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              IconButton(icon: Icon(Icons.house,size: 30), onPressed: () {},),
-              IconButton(icon: Icon(Icons.search,size: 30), onPressed: () {},),
-              IconButton(icon: Icon(Icons.shopping_cart_outlined,size: 30), onPressed: () {},),
-              IconButton(icon: Icon(Icons.perm_identity,size: 30), onPressed: () {},),
-            ],)
-      ),
+              IconButton(
+                icon: Icon(Icons.house, size: 30),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(Icons.search, size: 30),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(Icons.shopping_cart_outlined, size: 30),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(Icons.perm_identity, size: 30),
+                onPressed: () {},
+              ),
+            ],
+          )),
       body: Column(
         children: [
           Padding(
@@ -335,7 +346,6 @@ class _FirstScreenState extends State<FirstScreen> {
               ],
             ),
           ),
-
         ],
       ),
       // bottomNavitionBar()

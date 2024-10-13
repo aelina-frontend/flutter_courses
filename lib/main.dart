@@ -1,11 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled1/lessons/lesson2/lesson_func_screen.dart';
+import 'package:untitled1/screens/detail_screen.dart';
 import 'package:untitled1/screens/welcome_screen.dart';
 import 'lessons/lesson1/lesson1.dart';
 
 
 import 'package:device_preview/device_preview.dart';
+
+import 'lessons/lesson3/lesson_func2.dart';
 
 void main() => runApp(
   DevicePreview(
@@ -21,12 +24,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      theme: ThemeData.light(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.grey[200],
+      ),
       darkTheme: ThemeData.dark(),
-      home: WelcomeScreen(),
+      home: DetailScreen(),
     );
   }
 }
+
+
 // void main() {
 //   runApp(const MyApp());
 // }
