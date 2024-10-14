@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled1/home_works/home_work1.dart';
 import 'package:untitled1/lessons/lesson2/lesson_func_screen.dart';
 import 'package:untitled1/screens/detail_screen.dart';
 import 'package:untitled1/screens/welcome_screen.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.grey[200],
       ),
       darkTheme: ThemeData.dark(),
-      home: DetailScreen(),
+      home: HomeWork1(),
     );
   }
 }

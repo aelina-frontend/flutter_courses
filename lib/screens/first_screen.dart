@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled1/screens/detail_screen.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({super.key});
@@ -210,48 +211,56 @@ class _FirstScreenState extends State<FirstScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  height: 200,
-                  width: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: Colors.grey[200],
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Image.asset('assets/burger2.png'),
-                      Text(
-                        'Beef Burger',
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: 'Poppins'),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text(
-                            '\$$counter',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontFamily: 'Poppins',
-                                color: Colors.orange),
-                          ),
-                          IconButton(
-                            onPressed: () {
-                              setState(() {
-                                counter++;
-                              });
-                            },
-                            icon: Icon(
-                              Icons.add_circle,
-                              color: Colors.green,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DetailScreen()));
+                  },
+                  child: Container(
+                    height: 200,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.grey[200],
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Image.asset('assets/burger2.png'),
+                        Text(
+                          'Beef Burger',
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: 'Poppins'),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text(
+                              '\$$counter',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontFamily: 'Poppins',
+                                  color: Colors.orange),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
+                            IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  counter++;
+                                });
+                              },
+                              icon: Icon(
+                                Icons.add_circle,
+                                color: Colors.green,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(width: 10),
