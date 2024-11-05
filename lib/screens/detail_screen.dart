@@ -1,7 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:untitled1/screens/first_screen.dart';
+import 'package:untitled1/screens/items_cart.dart';
 import 'package:untitled1/screens/welcome_screen.dart';
+import 'package:untitled1/screens/widgets/button_widget.dart';
 
 class DetailScreen extends StatefulWidget {
   const DetailScreen({super.key});
@@ -21,8 +24,11 @@ class _DetailScreenState extends State<DetailScreen> {
       backgroundColor: Colors.deepPurple,
       appBar: AppBar(
         backgroundColor: Colors.deepPurple,
-        leading: Icon(
-          Icons.arrow_back_ios,
+        leading: IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => FirstScreen()));
+          },
+            icon: Icon(Icons.arrow_back_ios),
           color: Colors.white,
         ),
       ),
@@ -34,24 +40,12 @@ class _DetailScreenState extends State<DetailScreen> {
             width: 260,
             height: 200,
             decoration: BoxDecoration(
-                // gradient: RadialGradient(
-                //   colors: [Colors.transparent, Colors.grey.withOpacity(1)],
-                //   center: Alignment(0.5, 0.5),
-                //   radius: 0.7,
-                // ),
-                // gradient: SweepGradient(
-                //   colors: [Colors.transparent, Colors.grey, Colors.transparent,Colors.grey,Colors.transparent],
-                //   center: Alignment(0.5, 0.1),
-                // ),
-                // borderRadius: BorderRadius.all(
-                //   Radius.circular(60)
-                // ),
                 image: DecorationImage(
-                  image: AssetImage(
-                    'assets/burger3.png',
-                  ),
-                  fit: BoxFit.fill,
-                )),
+              image: AssetImage(
+                'assets/burger3.png',
+              ),
+              fit: BoxFit.fill,
+            )),
           ),
           Container(
             height: 500,
@@ -168,13 +162,14 @@ class _DetailScreenState extends State<DetailScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                          height: 80,
-                          width: 80,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16),
-                            color: Colors.grey[200],
-                          ),
-                          child: Image.asset('assets/chees.png')),
+                        height: 80,
+                        width: 80,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16),
+                          color: Colors.grey[200],
+                        ),
+                        child: Image.asset('assets/chees.png'),
+                      ),
                       Container(
                           height: 80,
                           width: 80,
@@ -194,25 +189,9 @@ class _DetailScreenState extends State<DetailScreen> {
                     ],
                   ),
                   SizedBox(height: 30),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => WelcomeScreen()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.deepPurple,
-                    ),
-                    child: Text(
-                      'Add to cart',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Poppins',
-                          fontSize: 25,
-                          color: Colors.white),
-                    ),
-                  )
+                  buttonWigdet(text: 'Add to cart', onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ItemsCart()));
+                  }),
                 ],
               ),
             ),

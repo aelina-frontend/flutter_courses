@@ -1,8 +1,23 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled1/home_works/home_work1.dart';
+import 'package:untitled1/home_works/home_work2.dart';
+import 'package:untitled1/home_works/home_work3.dart';
+import 'package:untitled1/home_works/home_work9/home_work9.dart';
+import 'package:untitled1/home_works/self_study/self_study_screen.dart';
 import 'package:untitled1/lessons/lesson2/lesson_func_screen.dart';
+import 'package:untitled1/lessons/lesson4/create_account.dart';
+import 'package:untitled1/lessons/lesson4/lesson4.dart';
+import 'package:untitled1/lessons/lesson5/home_work4.dart';
+import 'package:untitled1/lessons/lesson5/sign_up.dart';
+import 'package:untitled1/lessons/lesson6/lesson6.dart';
+import 'package:untitled1/lessons/lesson6/list_lesson.dart';
+import 'package:untitled1/lessons/lesson7/task_up_file.dart';
+import 'package:untitled1/lessons/lesson8/lesson8.dart';
+import 'package:untitled1/lessons/lesson9/add_screen.dart';
+import 'package:untitled1/lessons/lesson9/main_screen.dart';
 import 'package:untitled1/screens/detail_screen.dart';
+import 'package:untitled1/screens/items_cart.dart';
 import 'package:untitled1/screens/welcome_screen.dart';
 import 'lessons/lesson1/lesson1.dart';
 
@@ -10,6 +25,9 @@ import 'lessons/lesson1/lesson1.dart';
 import 'package:device_preview/device_preview.dart';
 
 import 'lessons/lesson3/lesson_func2.dart';
+import 'lessons/lesson4/login.dart';
+import 'lessons/lesson5/lesson5.dart';
+import 'lessons/lesson9/lesson9.dart';
 
 void main() => runApp(
   DevicePreview(
@@ -29,7 +47,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.grey[200],
       ),
       darkTheme: ThemeData.dark(),
-      home: HomeWork1(),
+      home: HomeWork9(),
     );
   }
 }

@@ -13,4 +13,5 @@ class AppAssets {
   static const String chees = 'assets/chees.png';
   static const String sous = 'assets/sous.png';
   static const String ketchup = 'assets/ketchup.png';
+  static const String visa = 'assets/visa.png';
 }

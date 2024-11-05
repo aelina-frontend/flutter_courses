@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/screens/detail_screen.dart';
+import 'package:untitled1/screens/welcome_screen.dart';
+import 'package:untitled1/screens/widgets/bottom_navigation_bar_widget.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({super.key});
@@ -15,6 +17,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           'Menu',
@@ -30,35 +33,9 @@ class _FirstScreenState extends State<FirstScreen> {
           ),
           SizedBox(
             width: 20,
-          )
+          ),
         ],
       ),
-      bottomNavigationBar: BottomAppBar(
-          shape: CircularNotchedRectangle(),
-          // height: 20,
-          notchMargin: 4.0,
-          child: new Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.house, size: 30),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: Icon(Icons.search, size: 30),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: Icon(Icons.shopping_cart_outlined, size: 30),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: Icon(Icons.perm_identity, size: 30),
-                onPressed: () {},
-              ),
-            ],
-          )),
       body: Column(
         children: [
           Padding(
@@ -205,7 +182,7 @@ class _FirstScreenState extends State<FirstScreen> {
               Spacer(),
             ],
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 15),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -355,9 +332,10 @@ class _FirstScreenState extends State<FirstScreen> {
               ],
             ),
           ),
+          SizedBox(height: 10,),
+          bottomNavigationBarWidget(onPressed: () {}),
         ],
       ),
-      // bottomNavitionBar()
     );
   }
 }

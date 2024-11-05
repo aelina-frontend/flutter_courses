@@ -92,6 +92,9 @@ class _LessonFunc2State extends State<LessonFunc2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+
+      ),
         body: SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
