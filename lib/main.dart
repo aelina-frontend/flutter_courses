@@ -19,6 +19,7 @@ import 'package:untitled1/lessons/lesson9/main_screen.dart';
 import 'package:untitled1/screens/detail_screen.dart';
 import 'package:untitled1/screens/items_cart.dart';
 import 'package:untitled1/screens/welcome_screen.dart';
+import 'lessons/class_lesson/class_screen.dart';
 import 'lessons/lesson1/lesson1.dart';
 
 
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.grey[200],
       ),
       darkTheme: ThemeData.dark(),
-      home: HomeWork9(),
+      home: ClassScreen(),
     );
   }
 }
