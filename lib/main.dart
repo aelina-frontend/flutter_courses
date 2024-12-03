@@ -1,41 +1,24 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled1/home_works/home_work1.dart';
-import 'package:untitled1/home_works/home_work2.dart';
-import 'package:untitled1/home_works/home_work3.dart';
-import 'package:untitled1/home_works/home_work9/home_work9.dart';
-import 'package:untitled1/home_works/self_study/self_study_screen.dart';
-import 'package:untitled1/lessons/lesson2/lesson_func_screen.dart';
-import 'package:untitled1/lessons/lesson4/create_account.dart';
-import 'package:untitled1/lessons/lesson4/lesson4.dart';
-import 'package:untitled1/lessons/lesson5/home_work4.dart';
-import 'package:untitled1/lessons/lesson5/sign_up.dart';
-import 'package:untitled1/lessons/lesson6/lesson6.dart';
-import 'package:untitled1/lessons/lesson6/list_lesson.dart';
-import 'package:untitled1/lessons/lesson7/task_up_file.dart';
-import 'package:untitled1/lessons/lesson8/lesson8.dart';
-import 'package:untitled1/lessons/lesson9/add_screen.dart';
-import 'package:untitled1/lessons/lesson9/main_screen.dart';
-import 'package:untitled1/screens/detail_screen.dart';
-import 'package:untitled1/screens/items_cart.dart';
-import 'package:untitled1/screens/welcome_screen.dart';
-import 'lessons/class_lesson/class_screen.dart';
-import 'lessons/lesson1/lesson1.dart';
-
-
+import 'package:google_fonts/google_fonts.dart';
+import 'package:untitled1/home_works/home_work18/presentation/screens/hw_home_screen.dart';
+import 'package:untitled1/lessons/inherited/inhereted_example.dart';
+import 'package:untitled1/lessons/inherited/inherited_screen.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:untitled1/lessons/lesson17/presentation/screens/product_screen.dart';
+import 'package:untitled1/lessons/lesson18/core/app_colors.dart';
+import 'package:untitled1/lessons/lesson18/presentation/screens/card_screen.dart';
+import 'package:untitled1/lessons/lesson18/presentation/screens/detaile_screen.dart';
+import 'package:untitled1/lessons/lesson18/presentation/screens/home_screen.dart';
+import 'package:untitled1/lessons/lesson18/presentation/screens/main_screen.dart';
 
-import 'lessons/lesson3/lesson_func2.dart';
-import 'lessons/lesson4/login.dart';
-import 'lessons/lesson5/lesson5.dart';
-import 'lessons/lesson9/lesson9.dart';
 
 void main() => runApp(
-  DevicePreview(
-    enabled: !kReleaseMode,
-    builder: (context) => MyApp(), // Wrap your app
-  ),
-);
+      DevicePreview(
+        enabled: !kReleaseMode,
+        builder: (context) => MyApp(), // Wrap your app
+      ),
+    );
 
 class MyApp extends StatelessWidget {
   @override
@@ -45,14 +28,14 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.grey[200],
+        scaffoldBackgroundColor: AppColors.whiteColor,
+        fontFamily: GoogleFonts.poppins().fontFamily,
       ),
       darkTheme: ThemeData.dark(),
-      home: ClassScreen(),
+      home: MainScreen()
     );
   }
 }
-
 
 // void main() {
 //   runApp(const MyApp());
@@ -63,35 +46,10 @@ class MyApp extends StatelessWidget {
 //
 //   @override
 //   Widget build(BuildContext context) {
-//     return ChangeNotifierProvider(
-//       create: (context) => Cart(),
-//       child: MaterialApp(
+//     return MaterialApp(
 //         debugShowCheckedModeBanner: false,
-//         initialRoute: '/lesson1',
-//         // initialRoute: '/loadSplash',
-//         routes: {
-//           '/loadSplash': (context) => WelcomeScreen(),
-//           '/productList': (context) => ProductListScreen(),
-//           '/cartScreen': (context) => CartScreen(),
-//           '/firstScreen': (context) => FirstScreen(),
-//           '/carInformation': (context) => CarInformation(),
-//           '/authScreen': (context) => AuthScreen(false, true),
-//           '/searchScreen': (context) => SearchScreen(),
-//           '/paymentMethodsScreen': (context) => PaymentMethodsScreen(),
-//           '/creditCard': (context) => CreditCard(),
-//           '/paymendMade': (context) => PaymendMade(),
-//           '/infoPage': (context) => InfoPage(),
-//           '/myProfil': (context) => MyProfil(),
-//           '/test': (context) => Test(),
-//           '/lesson1': (context) => Lesson1(),
+//        home: ProductScreen(),
 //
-//         },
-//       ),
-//     );
+//       );
 //   }
 // }
-
-
-
-
-
